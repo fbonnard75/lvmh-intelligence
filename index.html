@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVMH Market Intelligence — June 16, 2026</title>
+    <style>
+        /* ── Reset ─────────────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── Tokens ────────────────────────────────────────── */
+        :root {
+            --navy:  #121426;
+            --teal:  #224A3D;
+            --taupe: #8D7C71;
+            --gold:  #C4A44B;
+            --white: #FFFFFF;
+            --cream: #F5F0E8;
+            --body:  #363636;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--cream);
+            color: var(--body);
+            line-height: 1.5;
+        }
+
+        /* ── Header ─────────────────────────────────────────── */
+        .site-header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0;
+        }
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 24px 28px;
+        }
+        .header-label {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .header-title {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+        .header-date {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 15px;
+            color: var(--taupe);
+            margin-bottom: 4px;
+        }
+        .header-subtitle {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--taupe);
+        }
+        .gold-rule {
+            width: 100%;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.4;
+            margin: 20px 0 0;
+        }
+
+        /* ── Main ────────────────────────────────────────────── */
+        .main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+
+        /* ── Section headers ────────────────────────────────── */
+        .section-title {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--taupe);
+            font-family: 'Calibri', 'Arial', sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            border-left: 3px solid var(--gold);
+            padding-left: 10px;
+        }
+
+        /* ── Segment grid ────────────────────────────────────── */
+        .segments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .segment-card {
+            background: var(--white);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .segment-header {
+            padding: 14px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: white;
+            position: relative;
+        }
+
+        .segment-emoji {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .segment-title {
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            letter-spacing: 0.5px;
+            flex: 1;
+        }
+
+        .segment-stat {
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .stat-value {
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            white-space: nowrap;
+        }
+
+        .stat-label {
+            font-size: 9px;
+            opacity: 0.75;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            white-space: nowrap;
+        }
+
+        .segment-bullets {
+            list-style: none;
+            padding: 14px 16px;
+        }
+
+        .segment-bullets li {
+            font-size: 13px;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            color: var(--body);
+            padding: 5px 0 5px 14px;
+            border-bottom: 1px solid #f0ebe4;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .segment-bullets li:last-child {
+            border-bottom: none;
+        }
+
+        .segment-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            background: var(--teal);
+            border-radius: 0;
+        }
+
+        /* ── Market overview ─────────────────────────────────── */
+        .market-section {
+            background: var(--navy);
+            border-radius: 2px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .market-section .section-title {
+            color: var(--gold);
+            border-left-color: var(--gold);
+        }
+
+        .market-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .market-list li {
+            font-size: 13px;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            color: #d0cbc4;
+            padding: 10px 12px 10px 22px;
+            background: rgba(255,255,255,0.05);
+            position: relative;
+            line-height: 1.4;
+            border-left: 2px solid var(--gold);
+        }
+
+        /* ── Sources ─────────────────────────────────────────── */
+        .sources-section {
+            margin-bottom: 40px;
+        }
+
+        .sources-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sources-list li a {
+            display: inline-block;
+            background: var(--white);
+            color: var(--navy);
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 12px;
+            padding: 5px 12px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            transition: border-color 0.15s;
+        }
+
+        .sources-list li a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ── Footer ─────────────────────────────────────────── */
+        .site-footer {
+            background: var(--navy);
+            padding: 16px 24px;
+            text-align: center;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11px;
+            color: var(--taupe);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Responsive ──────────────────────────────────────── */
+        @media (max-width: 600px) {
+            .header-title { font-size: 22px; }
+            .segments-grid { grid-template-columns: 1fr; }
+            .market-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="header-label">LVMH</div>
+        <h1 class="header-title">MARKET INTELLIGENCE</h1>
+        <div class="header-date">June 16, 2026</div>
+        <div class="header-subtitle">Daily Luxury &amp; LVMH Briefing</div>
+        <div class="gold-rule"></div>
+    </div>
+</header>
+
+<main class="main">
+
+    <!-- Segment Cards -->
+    <p class="section-title">Business Segments</p>
+    <div class="segments-grid">
+        
+        <div class="segment-card">
+            <div class="segment-header" style="background:#8D7C71;">
+                <span class="segment-emoji">👜</span>
+                <span class="segment-title">Fashion & Leather Goods</span>
+                <div class="segment-stat">
+                    <div class="stat-value">-2% Q1</div>
+                    <div class="stat-label">Fashion Q1 2026</div>
+                </div>
+            </div>
+            <ul class="segment-bullets">
+                <li>Test bullet 1</li>
+<li>Test bullet 2</li>
+<li>Test bullet 3</li>
+<li>Test bullet 4</li>
+
+            </ul>
+        </div>
+        
+        <div class="segment-card">
+            <div class="segment-header" style="background:#6B3A2A;">
+                <span class="segment-emoji">🍾</span>
+                <span class="segment-title">Wines & Spirits</span>
+                <div class="segment-stat">
+                    <div class="stat-value">-5% FY</div>
+                    <div class="stat-label">Wines FY2025</div>
+                </div>
+            </div>
+            <ul class="segment-bullets">
+                <li>Test bullet 1</li>
+<li>Test bullet 2</li>
+<li>Test bullet 3</li>
+<li>Test bullet 4</li>
+
+            </ul>
+        </div>
+        
+        <div class="segment-card">
+            <div class="segment-header" style="background:#9B7FA3;">
+                <span class="segment-emoji">✨</span>
+                <span class="segment-title">Perfumes & Cosmetics</span>
+                <div class="segment-stat">
+                    <div class="stat-value">Stable</div>
+                    <div class="stat-label">Cosmetics Q1</div>
+                </div>
+            </div>
+            <ul class="segment-bullets">
+                <li>Test bullet 1</li>
+<li>Test bullet 2</li>
+<li>Test bullet 3</li>
+<li>Test bullet 4</li>
+
+            </ul>
+        </div>
+        
+        <div class="segment-card">
+            <div class="segment-header" style="background:#C4A44B;">
+                <span class="segment-emoji">💎</span>
+                <span class="segment-title">Watches & Jewelry</span>
+                <div class="segment-stat">
+                    <div class="stat-value">+3% FY</div>
+                    <div class="stat-label">Jewelry FY2025</div>
+                </div>
+            </div>
+            <ul class="segment-bullets">
+                <li>Test bullet 1</li>
+<li>Test bullet 2</li>
+<li>Test bullet 3</li>
+<li>Test bullet 4</li>
+
+            </ul>
+        </div>
+        
+        <div class="segment-card">
+            <div class="segment-header" style="background:#224A3D;">
+                <span class="segment-emoji">🛍</span>
+                <span class="segment-title">Selective Retailing</span>
+                <div class="segment-stat">
+                    <div class="stat-value">+4% Q1</div>
+                    <div class="stat-label">Retail Q1 2026</div>
+                </div>
+            </div>
+            <ul class="segment-bullets">
+                <li>Test bullet 1</li>
+<li>Test bullet 2</li>
+<li>Test bullet 3</li>
+<li>Test bullet 4</li>
+
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Market Overview -->
+    <div class="market-section">
+        <p class="section-title">Luxury Market Context</p>
+        <ul class="market-list">
+            <li>Signal 1</li>
+<li>Signal 2</li>
+<li>Signal 3</li>
+<li>Signal 4</li>
+<li>Signal 5</li>
+
+        </ul>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources-section">
+        <p class="section-title">Sources</p>
+        <ul class="sources-list">
+            <li><a href="https://www.lvmh.com" target="_blank" rel="noopener">LVMH.com</a></li>
+
+        </ul>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    LVMH Market Intelligence &nbsp;|&nbsp; Generated automatically on 2026-06-16 at 22:28 &nbsp;|&nbsp; Confidential
+</footer>
+
+</body>
+</html>
